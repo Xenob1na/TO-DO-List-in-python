@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} ToDo-List {% endblock title %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'list/css/main.css'%}" type="text/css">
+
+{% block content%}
+
+    <div class="todo-container">
+        <h2 style="font-size: 25px;">Изменение Списка дел</h2>
+        <div class="todo">
+            <form method="POST" class="todo-header">
+                {% csrf_token %}
+                <input type="text" name="name" value="{{product.name}}" />
+                <button type="submit">Сохранить</button>
+            </form>
+        </div>
+
+{% endblock content %}

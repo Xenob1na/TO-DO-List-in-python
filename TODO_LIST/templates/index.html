@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %} ToDo-List {% endblock title %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'list/css/main.css'%}" type="text/css">
+
+
+{% block content%}
+
+<div class="todo-container">
+    <h2>To-Do List</h2>
+    <div class="todo">
+        <form method="POST" class="todo-header">
+            {% csrf_token %}
+            <input type="text" name="name">
+            <button type="submit">Добавить</button>
+        </form>
+        <ul class="todo-list">
+            {% for product in products %}
+             <li class="todo-list-item">
+                    <div class="todo-list-item-name">
+                        <h3>{{ product.name }}</h3>
+                    </div>
+                    <a href="edit/{{product.id}}" class="edit">
+                        <span class="todo-edit">Редактировать</span>
+                    </a>
+                    <a href="delete/{{product.id}}" class="remove">
+                        <span class="todo-remove">Удалить</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock content %}

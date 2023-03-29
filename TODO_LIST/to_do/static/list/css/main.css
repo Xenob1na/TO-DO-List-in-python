@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #e27442;
+    font-family: 'Varela Round', sans-serif;
+}
+.todo-container {
+    color: white;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    padding: 20px;
+    width: 600px;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.todo {
+    width: 400px;
+}
+
+.todo-container h2 {
+    padding: 10px;
+    font-size: 45px;
+}
+
+.todo-header {
+    display: flex;
+}
+
+.todo-header input {
+    width: 92%;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+}
+
+.todo-header button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: rgb(51, 212, 100);
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.todo-header button:hover {
+    color: white;
+    background-color: rgb(37, 155, 73);
+}
+
+.todo-container ul {
+    list-style: none;
+}
+
+.todo-list-item {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+}
+.todo-list-item form {
+    width: 100%;
+    display: flex;
+}
+
+.todo-list-item div {
+    flex-grow: 2;
+}
+
+.todo-list-item .edit {
+    color : rgb(143, 233, 58);
+    margin-right: 10px;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.todo-list-item .remove {
+    color : rgb(243, 96, 96);
+    margin-right: 5px;
+    cursor:pointer;
+    text-decoration: none;
+}
+
